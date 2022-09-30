@@ -5,13 +5,12 @@
 # "the-stealth-warrior" gets converted to "theStealthWarrior"
 # "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
 
-#mysolution
+# mysolution
 
 def to_camel_case(str)
-  #a function that convert a dash/underscore delimited words into an Upper Camel Case string.
+  # a function that convert a dash/underscore delimited words into an Upper Camel Case string.
   array  = str.split(/_|-/)
   first_word = array.first
   array.shift
   "#{first_word}" + "#{array.map{|word| word.capitalize}.join("")}"
-
 end

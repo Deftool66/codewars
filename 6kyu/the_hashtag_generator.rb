@@ -1,8 +1,8 @@
-def generateHashtag(str)
+def generate_hashtag(str)
   # ...
-  array = str.split(" ")
-  array.reject!{ |sub| sub == " " }
-  if array.size == 0 || array.join.size > 139
+  array = str.split(' ')
+  array.reject! { |sub| sub == ' ' }
+  if array.size.zero? || array.join.size > 139
     false
   else
     array.map!(& :capitalize)

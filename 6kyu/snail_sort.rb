@@ -2,7 +2,7 @@ def snail_sort(array)
   new_array = []
   while array.length.positive? do
     new_array << array.shift
-    for  n in (0...array.length) do
+    (0...array.length).each  do |n|
       new_array << array[n].pop
     end
     new_array << (array.pop || []).reverse!
@@ -14,3 +14,5 @@ def snail_sort(array)
   end
   new_array.flatten
 end
+
+p snail_sort([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
